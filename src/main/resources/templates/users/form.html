@@ -10,7 +10,7 @@
 <body>
     <div th:replace="fragments/header :: header">...</div>
     <h3 th:text="${userModel.title}">Welcome to springboot</h3>
-    <form action="/users" th:action="@{/users}" method="post" th:object="${userModel.user}" >
+    <form action="/users/create" th:action="@{/users/create}" method="post" th:object="${userModel.user}" >
         <input type="hidden" name="id" th:value="${userModel.user.id}">
         名称：<br>
         <input type="text" name="name" th:value="*{name}">

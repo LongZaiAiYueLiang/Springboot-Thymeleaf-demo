@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.model.User;
 import com.example.demo.repo.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,7 +15,7 @@ import java.util.List;
  * @date: 2019-07-17 09:46:33
  * @description:
  */
-@RestController
+@Controller
 @RequestMapping("/users")
 public class UserController {
     @Autowired
@@ -52,7 +53,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @PostMapping
+    @PostMapping("/create")
     public ModelAndView create(User user) {
         user = userRepository.saveOrUpateUser(user);
 

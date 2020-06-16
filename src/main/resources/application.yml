@@ -16,3 +16,7 @@ spring:
           enable: true
           path: /**
 
+  #热部署生效
+  devtools:
+    restart:
+      enabled: true

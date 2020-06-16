@@ -22,7 +22,7 @@ public class UserRepositoryImpl implements IUserRepository {
 
     public UserRepositoryImpl(){
         User user = new User();
-        user.setAge(30);
+        user.setAge(130);
         user.setName("大西瓜");
         this.saveOrUpateUser(user);
     }
